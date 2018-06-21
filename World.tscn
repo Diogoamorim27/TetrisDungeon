@@ -1,0 +1,452 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Peca.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.2023, 31.8323 )
+
+[node name="World" type="Node" index="0"]
+
+[node name="PecaI" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 768, 64 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Bloco6" type="Node2D" parent="PecaI" index="0"]
+
+editor/display_folded = true
+position = Vector2( 0, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaI/Bloco6" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaI/Bloco6/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaI/Bloco6/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Bloco7" type="Node2D" parent="PecaI" index="1"]
+
+editor/display_folded = true
+position = Vector2( 0, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaI/Bloco7" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaI/Bloco7/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaI/Bloco7/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Bloco5" type="Node2D" parent="PecaI" index="2"]
+
+editor/display_folded = true
+position = Vector2( 0, -64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaI/Bloco5" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaI/Bloco5/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaI/Bloco5/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Bloco8" type="Node2D" parent="PecaI" index="3"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaI/Bloco8" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaI/Bloco8/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaI/Bloco8/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="PecaO" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 640, 320 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Bloco6" type="Node2D" parent="PecaO" index="0"]
+
+editor/display_folded = true
+position = Vector2( 0, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaO/Bloco6" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaO/Bloco6/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaO/Bloco6/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Bloco7" type="Node2D" parent="PecaO" index="1"]
+
+editor/display_folded = true
+position = Vector2( 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaO/Bloco7" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaO/Bloco7/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaO/Bloco7/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Bloco5" type="Node2D" parent="PecaO" index="2"]
+
+editor/display_folded = true
+position = Vector2( 64, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaO/Bloco5" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaO/Bloco5/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaO/Bloco5/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Bloco8" type="Node2D" parent="PecaO" index="3"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaO/Bloco8" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaO/Bloco8/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaO/Bloco8/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="PecaT" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 896, 384 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Bloco6" type="Node2D" parent="PecaT" index="0"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="StaticBody2D" parent="PecaT/Bloco6" index="0"]
+
+position = Vector2( -0.380249, 1.92239 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaT/Bloco6/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="PecaT/Bloco6" index="1"]
+
+position = Vector2( 0.0953979, 1.68457 )
+texture = ExtResource( 2 )
+
+[node name="PecaL" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 960, 128 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Bloco" type="Node2D" parent="PecaL" index="0"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaL/Bloco" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaL/Bloco/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaL/Bloco/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Bloco2" type="Node2D" parent="PecaL" index="1"]
+
+editor/display_folded = true
+position = Vector2( 0, 60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaL/Bloco2" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaL/Bloco2/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaL/Bloco2/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Bloco3" type="Node2D" parent="PecaL" index="2"]
+
+editor/display_folded = true
+position = Vector2( -60, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaL/Bloco3" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaL/Bloco3/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaL/Bloco3/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Bloco4" type="Node2D" parent="PecaL" index="3"]
+
+editor/display_folded = true
+position = Vector2( 0, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PecaL/Bloco4" index="0"]
+
+position = Vector2( 0.0954208, 1.68458 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="PecaL/Bloco4/Sprite" index="0"]
+
+position = Vector2( -0.475647, 0.237823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PecaL/Bloco4/Sprite/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Bloco7" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 896, 576 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="StaticBody2D" parent="Bloco7" index="0"]
+
+position = Vector2( -0.380249, 1.92239 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloco7/Area2D" index="0"]
+
+position = Vector2( 0.284798, -0.427185 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Bloco7" index="1"]
+
+position = Vector2( 0.0953979, 1.68457 )
+texture = ExtResource( 2 )
+
+
