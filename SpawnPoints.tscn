@@ -1,0 +1,63 @@
+[gd_scene format=2]
+
+[node name="SpawnPoints" type="Node2D" index="0"]
+
+position = Vector2( 448, 224 )
+scale = Vector2( 9.84375, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="0" type="Position2D" parent="." index="0"]
+
+position = Vector2( -29.054, 2 )
+scale = Vector2( 0.101587, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="4" type="Position2D" parent="." index="1"]
+
+position = Vector2( -3.04762, 2 )
+scale = Vector2( 0.101587, 1 )
+
+[node name="1" type="Position2D" parent="." index="2"]
+
+position = Vector2( -22.5524, 2 )
+scale = Vector2( 0.101587, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="3" type="Position2D" parent="." index="3"]
+
+position = Vector2( -9.54921, 2 )
+scale = Vector2( 0.101587, 1 )
+
+[node name="8" type="Position2D" parent="." index="4"]
+
+position = Vector2( 22.9587, 2 )
+scale = Vector2( 0.101587, 1 )
+
+[node name="5" type="Position2D" parent="." index="5"]
+
+position = Vector2( 3.45397, 2 )
+scale = Vector2( 0.101587, 1 )
+
+[node name="6" type="Position2D" parent="." index="6"]
+
+position = Vector2( 9.95555, 2 )
+scale = Vector2( 0.101587, 1 )
+
+[node name="2" type="Position2D" parent="." index="7"]
+
+position = Vector2( -16.0508, 2 )
+scale = Vector2( 0.101587, 1 )
+
+[node name="7" type="Position2D" parent="." index="8"]
+
+position = Vector2( 16.4571, 2 )
+scale = Vector2( 0.101587, 1 )
+
+[node name="9" type="Position2D" parent="." index="9"]
+
+position = Vector2( 29.4603, 2 )
+scale = Vector2( 0.101587, 1 )
+
+

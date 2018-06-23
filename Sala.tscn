@@ -1,80 +1,153 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sala.gd" type="Script" id=1]
-[ext_resource path="res://ParedeChao.tscn" type="PackedScene" id=2]
+[ext_resource path="res://SpawnPoints.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ParedeChao.tscn" type="PackedScene" id=3]
 
 [node name="Sala" type="Node" index="0"]
 
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 0.0 ]
+}
 
-[node name="ParedesChao" type="Node2D" parent="." index="0"]
+[node name="SpawnPoints" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 512, 32 )
+
+[node name="ParedesChao" type="Node2D" parent="." index="1"]
 
 editor/display_folded = true
 position = Vector2( 544, 608 )
 
-[node name="ParedeChao" parent="ParedesChao" index="0" instance=ExtResource( 2 )]
+[node name="ParedeChao" parent="ParedesChao" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 0, -32 )
+[node name="ParedeChao9" parent="ParedesChao" index="1" instance=ExtResource( 3 )]
 
-[node name="ParedeChao9" parent="ParedesChao" index="1" instance=ExtResource( 2 )]
-
-position = Vector2( -512, -32 )
+position = Vector2( -512, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="ParedeChao5" parent="ParedesChao" index="2" instance=ExtResource( 2 )]
+[node name="ParedeChao25" parent="ParedesChao" index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 256, -32 )
+position = Vector2( -512, -192 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="ParedeChao11" parent="ParedesChao" index="3" instance=ExtResource( 2 )]
+[node name="ParedeChao22" parent="ParedesChao" index="3" instance=ExtResource( 3 )]
 
-position = Vector2( -256, -32 )
+position = Vector2( -384, -576 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="ParedeChao3" parent="ParedesChao" index="4" instance=ExtResource( 2 )]
+[node name="ParedeChao27" parent="ParedesChao" index="4" instance=ExtResource( 3 )]
 
-position = Vector2( 128, -32 )
+position = Vector2( 320, -576 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="ParedeChao13" parent="ParedesChao" index="5" instance=ExtResource( 2 )]
+[node name="ParedeChao5" parent="ParedesChao" index="5" instance=ExtResource( 3 )]
 
-position = Vector2( -384, -32 )
+position = Vector2( 256, 0 )
 
-[node name="ParedeChao6" parent="ParedesChao" index="6" instance=ExtResource( 2 )]
+[node name="ParedeChao11" parent="ParedesChao" index="6" instance=ExtResource( 3 )]
 
-position = Vector2( 384, -32 )
+position = Vector2( -256, 0 )
 
-[node name="ParedeChao12" parent="ParedesChao" index="7" instance=ExtResource( 2 )]
+[node name="ParedeChao21" parent="ParedesChao" index="7" instance=ExtResource( 3 )]
 
-position = Vector2( -128, -32 )
+position = Vector2( -384, -320 )
 
-[node name="ParedeChao2" parent="ParedesChao" index="8" instance=ExtResource( 2 )]
+[node name="ParedeChao33" parent="ParedesChao" index="8" instance=ExtResource( 3 )]
 
-position = Vector2( 64, -32 )
+position = Vector2( 320, -128 )
 
-[node name="ParedeChao14" parent="ParedesChao" index="9" instance=ExtResource( 2 )]
+[node name="ParedeChao26" parent="ParedesChao" index="9" instance=ExtResource( 3 )]
 
-position = Vector2( -448, -32 )
+position = Vector2( 320, -320 )
 
-[node name="ParedeChao7" parent="ParedesChao" index="10" instance=ExtResource( 2 )]
+[node name="ParedeChao3" parent="ParedesChao" index="10" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -32 )
+position = Vector2( 128, 0 )
 
-[node name="ParedeChao15" parent="ParedesChao" index="11" instance=ExtResource( 2 )]
+[node name="ParedeChao13" parent="ParedesChao" index="11" instance=ExtResource( 3 )]
 
-position = Vector2( -192, -32 )
+position = Vector2( -384, 0 )
 
-[node name="ParedeChao4" parent="ParedesChao" index="12" instance=ExtResource( 2 )]
+[node name="ParedeChao24" parent="ParedesChao" index="12" instance=ExtResource( 3 )]
 
-position = Vector2( 192, -32 )
+position = Vector2( -384, -192 )
 
-[node name="ParedeChao16" parent="ParedesChao" index="13" instance=ExtResource( 2 )]
+[node name="ParedeChao29" parent="ParedesChao" index="13" instance=ExtResource( 3 )]
 
-position = Vector2( -320, -32 )
+position = Vector2( 320, -192 )
 
-[node name="ParedeChao8" parent="ParedesChao" index="14" instance=ExtResource( 2 )]
+[node name="ParedeChao20" parent="ParedesChao" index="14" instance=ExtResource( 3 )]
 
-position = Vector2( 448, -32 )
+position = Vector2( -384, -448 )
 
-[node name="ParedeChao10" parent="ParedesChao" index="15" instance=ExtResource( 2 )]
+[node name="ParedeChao30" parent="ParedesChao" index="15" instance=ExtResource( 3 )]
 
-position = Vector2( -64, -32 )
+position = Vector2( 320, -448 )
+
+[node name="ParedeChao12" parent="ParedesChao" index="16" instance=ExtResource( 3 )]
+
+position = Vector2( -128, 0 )
+
+[node name="ParedeChao2" parent="ParedesChao" index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 64, 0 )
+
+[node name="ParedeChao14" parent="ParedesChao" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( -448, 0 )
+
+[node name="ParedeChao23" parent="ParedesChao" index="19" instance=ExtResource( 3 )]
+
+position = Vector2( -448, -192 )
+
+[node name="ParedeChao18" parent="ParedesChao" index="20" instance=ExtResource( 3 )]
+
+position = Vector2( -384, -512 )
+
+[node name="ParedeChao28" parent="ParedesChao" index="21" instance=ExtResource( 3 )]
+
+position = Vector2( 320, -512 )
+
+[node name="ParedeChao7" parent="ParedesChao" index="22" instance=ExtResource( 3 )]
+
+position = Vector2( 320, 0 )
+
+[node name="ParedeChao15" parent="ParedesChao" index="23" instance=ExtResource( 3 )]
+
+position = Vector2( -192, 0 )
+
+[node name="ParedeChao19" parent="ParedesChao" index="24" instance=ExtResource( 3 )]
+
+position = Vector2( -384, -256 )
+
+[node name="ParedeChao35" parent="ParedesChao" index="25" instance=ExtResource( 3 )]
+
+position = Vector2( 320, -64 )
+
+[node name="ParedeChao31" parent="ParedesChao" index="26" instance=ExtResource( 3 )]
+
+position = Vector2( 320, -256 )
+
+[node name="ParedeChao4" parent="ParedesChao" index="27" instance=ExtResource( 3 )]
+
+position = Vector2( 192, 0 )
+
+[node name="ParedeChao16" parent="ParedesChao" index="28" instance=ExtResource( 3 )]
+
+position = Vector2( -320, 0 )
+
+[node name="ParedeChao17" parent="ParedesChao" index="29" instance=ExtResource( 3 )]
+
+position = Vector2( -384, -384 )
+
+[node name="ParedeChao32" parent="ParedesChao" index="30" instance=ExtResource( 3 )]
+
+position = Vector2( 320, -384 )
+
+[node name="ParedeChao10" parent="ParedesChao" index="31" instance=ExtResource( 3 )]
+
+position = Vector2( -64, 0 )
 
 

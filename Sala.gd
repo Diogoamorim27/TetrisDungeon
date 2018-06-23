@@ -1,10 +1,10 @@
 extends Node
 const SPRITE_SIZE = 64
 const SPRITE_FIRST_POS = 96
+const NOME_DE_ARQUIVO_T = "res://T.tscn"
 
 var spawnPosition
 var timer 
-var nomeDeArquivoT = "res://T.tscn"
 var TResource
 var T
 
@@ -16,7 +16,7 @@ func _ready():
 	add_child(timer) 
 	timer.wait_time = 8
 	timer.start()
-	TResource = load(nomeDeArquivoT)
+	TResource = preload(NOME_DE_ARQUIVO_T)
 	T = TResource.instance()
 	T.position.y = 64
 	spawnPosition = (randi() % 10) * 64 + SPRITE_FIRST_POS
@@ -26,7 +26,7 @@ func _ready():
 	pass
 
 func _on_timer_timeout():
-	T.free()
+	#T.free()
 	randomize()
 	T = TResource.instance()
 	T.position.y = 64
