@@ -9,6 +9,7 @@ script = ExtResource( 1 )
 
 [node name="ParedesChao" type="Node2D" parent="." index="0"]
 
+editor/display_folded = true
 position = Vector2( 544, 608 )
 
 [node name="ParedeChao" parent="ParedesChao" index="0" instance=ExtResource( 2 )]
@@ -18,6 +19,7 @@ position = Vector2( 0, -32 )
 [node name="ParedeChao9" parent="ParedesChao" index="1" instance=ExtResource( 2 )]
 
 position = Vector2( -512, -32 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="ParedeChao5" parent="ParedesChao" index="2" instance=ExtResource( 2 )]
 

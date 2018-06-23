@@ -1,6 +1,7 @@
 extends Node2D
 
 var timer
+const SPRITE_SIZE = 64
 
 func _ready():
 	timer = Timer.new()
@@ -18,4 +19,4 @@ func _process(delta):
 	pass
 
 func _on_timer_timeout ():
-		self.position.y = self.position.y + 64
+		self.position.y = self.position.y + SPRITE_SIZE
