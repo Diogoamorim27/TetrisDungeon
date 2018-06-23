@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sala.gd" type="Script" id=1]
+[ext_resource path="res://ParedeChao.tscn" type="PackedScene" id=2]
+
+[node name="Sala" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="ParedesChao" type="Node2D" parent="." index="0"]
+
+position = Vector2( 544, 608 )
+
+[node name="ParedeChao" parent="ParedesChao" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 0, -32 )
+
+[node name="ParedeChao9" parent="ParedesChao" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -512, -32 )
+
+[node name="ParedeChao5" parent="ParedesChao" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 256, -32 )
+
+[node name="ParedeChao11" parent="ParedesChao" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( -256, -32 )
+
+[node name="ParedeChao3" parent="ParedesChao" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 128, -32 )
+
+[node name="ParedeChao13" parent="ParedesChao" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( -384, -32 )
+
+[node name="ParedeChao6" parent="ParedesChao" index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 384, -32 )
+
+[node name="ParedeChao12" parent="ParedesChao" index="7" instance=ExtResource( 2 )]
+
+position = Vector2( -128, -32 )
+
+[node name="ParedeChao2" parent="ParedesChao" index="8" instance=ExtResource( 2 )]
+
+position = Vector2( 64, -32 )
+
+[node name="ParedeChao14" parent="ParedesChao" index="9" instance=ExtResource( 2 )]
+
+position = Vector2( -448, -32 )
+
+[node name="ParedeChao7" parent="ParedesChao" index="10" instance=ExtResource( 2 )]
+
+position = Vector2( 320, -32 )
+
+[node name="ParedeChao15" parent="ParedesChao" index="11" instance=ExtResource( 2 )]
+
+position = Vector2( -192, -32 )
+
+[node name="ParedeChao4" parent="ParedesChao" index="12" instance=ExtResource( 2 )]
+
+position = Vector2( 192, -32 )
+
+[node name="ParedeChao16" parent="ParedesChao" index="13" instance=ExtResource( 2 )]
+
+position = Vector2( -320, -32 )
+
+[node name="ParedeChao8" parent="ParedesChao" index="14" instance=ExtResource( 2 )]
+
+position = Vector2( 448, -32 )
+
+[node name="ParedeChao10" parent="ParedesChao" index="15" instance=ExtResource( 2 )]
+
+position = Vector2( -64, -32 )
+
+
