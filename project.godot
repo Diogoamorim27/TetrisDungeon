@@ -10,8 +10,8 @@ config_version=3
 
 [application]
 
-config/name="TetrisDungeon"
-run/main_scene="res://Sala.tscn"
+config/name="Ampulheta"
+run/main_scene="res://Salas/Sala.tscn"
 config/icon="res://icon.png"
 
 [rendering]

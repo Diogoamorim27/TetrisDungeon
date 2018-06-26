@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Sala.gd" type="Script" id=1]
-[ext_resource path="res://SpawnPoints.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ParedeChao.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Salas/Sala.gd" type="Script" id=1]
+[ext_resource path="res://Salas/SpawnPoints.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Blocos/ParedeChao.tscn" type="PackedScene" id=3]
 
 [node name="Sala" type="Node" index="0"]
 
@@ -149,5 +149,12 @@ position = Vector2( 320, -384 )
 [node name="ParedeChao10" parent="ParedesChao" index="31" instance=ExtResource( 3 )]
 
 position = Vector2( -64, 0 )
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = true
 
 
