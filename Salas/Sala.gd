@@ -78,13 +78,13 @@ func _spawn_block():
 	if (indexSpawnPosition == 0):
 		indexPeca = randi() % 7
 		pecaAtualRes= load(ARQUIVOS_PECAS_POS_0[indexPeca])
-		print("ola")
+		#print("ola")
 	elif (indexSpawnPosition == 9):
 		indexPeca = randi() % 4
 		pecaAtualRes= load(ARQUIVOS_PECAS_POS_9[indexPeca])
-		print("ole")
+		#print("ole")
 	else:
-		print("olo")
+		#print("olo")
 		indexPeca = randi() % 19
 		if (indexSpawnPosition == 1  && indexPeca == 1):
 			indexSpawnPosition += 1

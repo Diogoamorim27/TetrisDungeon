@@ -4,7 +4,7 @@
 [ext_resource path="res://Salas/SpawnPoints.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blocos/ParedeChao.tscn" type="PackedScene" id=3]
 
-[node name="Sala" type="Node"]
+[node name="Sala" type="Node" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -17,7 +17,6 @@ position = Vector2( 512, 32 )
 
 [node name="ParedesChao" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 544, 608 )
 
 [node name="ParedeChao" parent="ParedesChao" index="0" instance=ExtResource( 3 )]
@@ -64,7 +63,7 @@ position = Vector2( 320, -320 )
 
 [node name="ParedeChao3" parent="ParedesChao" index="10" instance=ExtResource( 3 )]
 
-position = Vector2( 128, 0 )
+position = Vector2( 129.228, 0 )
 
 [node name="ParedeChao13" parent="ParedesChao" index="11" instance=ExtResource( 3 )]
 
