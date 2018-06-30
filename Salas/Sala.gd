@@ -30,7 +30,7 @@ const ARQUIVOS_PECAS_POS_0 = [
 	"res://Pecas/O.tscn",
 	"res://Pecas/S2.tscn",
 	"res://Pecas/T2.tscn",
-	"res://Pecas/Z1.tscn",
+	"res://Pecas/Z2.tscn",
 	]
 	
 const ARQUIVOS_PECAS_POS_9 = [
@@ -93,7 +93,7 @@ func _spawn_block():
 		pecaAtualRes = load(ARQUIVOS_PECAS[indexPeca])
 	spawnPosition = spawnPoints[indexSpawnPosition].global_position
 	pecaAtual = pecaAtualRes.instance()
-	get_parent().add_child(pecaAtual)
+	add_child(pecaAtual)
 	pecaAtual.global_position = spawnPosition
 	
 	

@@ -11,14 +11,17 @@ func _ready():
 	$RayCast2D.cast_to.y = $Sprite.texture.get_height() / 2
 	for child in get_parent().get_children():
 		$RayCast2D.add_exception(child)
+	#for child in get_parent().get_parent().get_child(0).get_children():
+	#	$RayCast2D.add_exception(child)
 	
 	#direcao = Vector2(0,1)
 	connect("_bateu", get_parent(), "_colisao")
 	pass
 
 func _physics_process(delta):
-	if $RayCast2D.is_colliding():
-		emit_signal("_bateu")
+	for spawn in get_parent().get_parent().get_child(0).get_children():
+		if $RayCast2D.is_colliding() && $RayCast2D.get_collider() != spawn:
+			emit_signal("_bateu")
 		#print("bateu")
 			
 	#pos = self.transform

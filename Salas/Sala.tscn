@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Salas/Sala.gd" type="Script" id=1]
 [ext_resource path="res://Salas/SpawnPoints.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blocos/ParedeChao.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
 
 [node name="Sala" type="Node" index="0"]
 
@@ -17,6 +18,7 @@ position = Vector2( 512, 32 )
 
 [node name="ParedesChao" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 544, 608 )
 
 [node name="ParedeChao" parent="ParedesChao" index="0" instance=ExtResource( 3 )]
@@ -149,11 +151,8 @@ position = Vector2( 320, -384 )
 
 position = Vector2( -64, 0 )
 
-[node name="Timer" type="Timer" parent="." index="2"]
+[node name="Player" parent="." index="2" instance=ExtResource( 4 )]
 
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = true
+position = Vector2( 32, 512 )
 
 
