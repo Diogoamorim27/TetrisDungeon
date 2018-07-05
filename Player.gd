@@ -2,37 +2,66 @@ extends KinematicBody2D
 
 const SPEED = 500
 const UP = Vector2(0,-1)
-const GRAVITY = 300
-const JUMP_HEIGHT = -500
+const GRAVITY_VEC = Vector2(0, 900)
+const JUMP_SPEED = -700
+const WALL_JUMP_KICK = 700
 
 var motion = Vector2(0,0)
+var on_floor = 0
+var on_left_wall = 0
+var on_right_wall = 0 
+var wall_jump = 0
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
-
+#func _ready():
+	#$RayCast2D.cast_to.y = $Sprite.texture.get_height() / 2
+	
+	#pass
+	
 func _process(delta):
-	if Input.is_action_pressed("ui_left"):
-		if motion.x > 0:
-			motion.x = 0
-		motion.x = -SPEED
-		
-	elif Input.is_action_pressed("ui_right"):
-		if motion.x < 0:
-			motion.x = 0
-		motion.x = SPEED
-		
-	if Input.is_action_just_pressed("ui_up") && is_on_floor():
-		motion.y += JUMP_HEIGHT
-		
+	
+	# MOVIMENTO #
+	# Gravidade
+	motion += delta * GRAVITY_VEC
+	# Mover
+	motion = move_and_slide(motion, UP)
+	# Colisão com o chão 
+	if $RayCastChao.is_colliding():
+		on_floor = 1
+		wall_jump = 0
 	else:
-		motion.y += GRAVITY * delta
-		motion.x = lerp(motion.x, 0, 0.2)
+		on_floor = 0
+	# Colisao com as paredes
+	if $RayCastParedeEsquerda.is_colliding():
+		on_left_wall = 1
+	else: 
+		on_left_wall = 0
+	if $RayCastParedeDireita.is_colliding():
+		on_right_wall = 1
+	else:
+		on_right_wall = 0
 		
-	move_and_slide(motion, UP)
+	# INPUT #
+	# Movimento Horizontal
+	var target_speed = 0
+	if Input.is_action_pressed("ui_left"):
+		target_speed += -1
+	if Input.is_action_pressed("ui_right"):
+		target_speed += 1
+		
+	target_speed *= SPEED
+	motion.x = lerp(motion.x, target_speed, 0.1)
+	
+	# Pulo e Wall Jump
+	if Input.is_action_just_pressed("ui_accept"):
+		if on_floor:
+			motion.y = JUMP_SPEED
+		elif !wall_jump:
+			if on_left_wall:
+				motion.y = JUMP_SPEED
+				#motion.x = -WALL_JUMP_KICK
+				wall_jump = 1
+			elif on_right_wall:
+				motion.y = JUMP_SPEED
+				#motion.x = WALL_JUMP_KICK
+				wall_jump = 1
 	pass

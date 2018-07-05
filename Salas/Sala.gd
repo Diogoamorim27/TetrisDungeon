@@ -68,6 +68,7 @@ func _ready():
 
 func _on_timer_timeout():
 	_spawn_block()
+	
 	pass
 	
 func _spawn_block():
