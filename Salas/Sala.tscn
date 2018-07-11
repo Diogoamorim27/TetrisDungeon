@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 64 )
 
-[node name="Sala" type="Node"]
+[node name="Sala" type="Node" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -520,7 +520,7 @@ position = Vector2( -64, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
 
-position = Vector2( 512, 128 )
+position = Vector2( 512, 96 )
 anchor_mode = 1
 rotating = false
 current = true
