@@ -11,5 +11,5 @@ func _ready():
 	pass
 
 func _on_timer_timeout():
-	self.transform.y -= Vector2(0, 64)
+	#self.transform.y -= Vector2(0, 64)
 	pass

@@ -11,6 +11,7 @@ var on_floor = 0
 var on_left_wall = 0
 var on_right_wall = 0 
 var wall_jump = 0
+var anim = ""
 
 #func _ready():
 	#$RayCast2D.cast_to.y = $Sprite.texture.get_height() / 2
@@ -64,4 +65,34 @@ func _process(delta):
 				motion.y = JUMP_SPEED
 				#motion.x = WALL_JUMP_KICK
 				wall_jump = 1
+				
+	# ANIMACÃO #
+	var new_anim = "Idle"
+	
+	if motion.x > 0:
+		$Sprite.flip_h = true
+	if motion.x < 0:
+		$Sprite.flip_h = false
+	
+	if on_floor:
+		if motion.x && (Input.is_action_pressed("ui_right") || Input.is_action_pressed("ui_left")):
+			new_anim = "Run"
+		else:
+			new_anim = "Idle"
+	elif !on_left_wall && !on_right_wall:
+		if motion.y > 0:
+			new_anim = "Jump_Up"
+		if motion.y < 0:
+			new_anim = "Jump_Down"
+	else:
+		new_anim =  "Wall_Jump"
+			
+	
+	if new_anim != anim:
+		anim = new_anim
+		$AnimationPlayer.play(anim)
+	#if on_floor:
+		#if motion.x < 0:
+			#$Sprite.flip_h = 1
+			
 	pass

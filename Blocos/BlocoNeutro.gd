@@ -3,12 +3,16 @@ extends Node2D
 signal _bateu
 var direcao
 var pos
+var spawn_points
 
 func _ready():
 	$RayCast2D.cast_to.y = $Sprite.texture.get_height() / 2
 	for child in get_parent().get_children():
 		$RayCast2D.add_exception(child)
-	$RayCast2D.add_exception(get_parent().get_parent().get_child(2)) #obs perguntar sobre "$" pro Tomaz
+	for child in get_parent().get_parent().get_children():
+		if child.name == "SpawnPoints":
+			print("achei")
+			$RayCast2D.add_exception(child) #obs perguntar sobre "$" pro Tomaz
 	connect("_bateu", get_parent(), "_colisao")
 	pass
 
