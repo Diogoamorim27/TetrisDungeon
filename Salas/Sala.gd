@@ -99,7 +99,13 @@ func _spawn_block():
 	
 	
 	pass
-#func _process(delta):
+	
+func _morrer():
+	get_tree().quit()
+	pass
+
+func _process(delta):
+	
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
-#	pass
+	pass

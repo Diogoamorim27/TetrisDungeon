@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="ParedeChao" type="Node2D" index="0"]
+[node name="ParedeChao" type="Node2D"]
 
 [node name="RigidBody2D" type="StaticBody2D" parent="." index="0"]
 
@@ -26,7 +26,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
 
-visible = false
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 

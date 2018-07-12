@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Blocos/Spikes/SpikeBlock.gd" type="Script" id=1]
+[ext_resource path="res://Blocos/Spikes/spikes_bloco.png" type="Texture" id=2]
+[ext_resource path="res://Blocos/Spikes/spikes_1.png" type="Texture" id=3]
+[ext_resource path="res://Blocos/Spikes/spikes_2.png" type="Texture" id=4]
+[ext_resource path="res://Blocos/Spikes/spikes_3.png" type="Texture" id=5]
+[ext_resource path="res://Blocos/Spikes/spikes_4.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30, 32 )
+
+[node name="SpikeBlock" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( -3.8147e-06, -3.8147e-06 )
+scale = Vector2( 0.301887, 0.301887 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="SpriteSpike1" type="Sprite" parent="." index="1"]
+
+scale = Vector2( 0.294643, 0.293005 )
+texture = ExtResource( 3 )
+
+[node name="SpriteSpike2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 0, -0.494818 )
+scale = Vector2( 0.299498, 0.303608 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="SpriteSpike3" type="Sprite" parent="." index="3"]
+
+scale = Vector2( 0.294643, 0.293005 )
+texture = ExtResource( 5 )
+
+[node name="SpriteSpike4" type="Sprite" parent="." index="4"]
+
+position = Vector2( 0, -1.74482 )
+scale = Vector2( 0.303088, 0.301823 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="5"]
+
+visible = false
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="RayCast2D1" type="RayCast2D" parent="." index="6"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 32 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="RayCast2D2" type="RayCast2D" parent="." index="7"]
+
+rotation = 1.5708
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 32 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RayCast2D3" type="RayCast2D" parent="." index="8"]
+
+rotation = 3.14159
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 32 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RayCast2D4" type="RayCast2D" parent="." index="9"]
+
+rotation = -1.5708
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 32 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+
