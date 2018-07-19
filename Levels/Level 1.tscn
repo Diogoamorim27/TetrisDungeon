@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Levels/TileMap.gd" type="Script" id=1]
-[ext_resource path="res://Levels/Enviroment.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Blocks/Enviroment Blocks/EnviromentBlock.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Piece Shapes/shapes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/Enviroment.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Piece Shapes/shapes.tscn" type="PackedScene" id=6]
 
 [node name="Level 1" type="Node2D" index="0"]
 
@@ -31,36 +30,23 @@ tile_data = PoolIntArray(  )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Cell" ]
 
-[node name="Enviroment" parent="TileMap" index="0" instance=ExtResource( 2 )]
+[node name="Camera2D" parent="TileMap" index="0" instance=ExtResource( 2 )]
 
-position = Vector2( -320, 2624 )
+position = Vector2( 352, 3008 )
 
-[node name="EnviromentBlock" parent="TileMap" index="1" instance=ExtResource( 3 )]
+[node name="shapes" parent="TileMap" index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 112, 3296 )
-
-[node name="Camera2D" parent="TileMap" index="2" instance=ExtResource( 4 )]
-
-position = Vector2( 320, 3200 )
-
-[node name="Player" parent="TileMap" index="3" instance=ExtResource( 5 )]
-
-position = Vector2( 336, 3152 )
-
-[node name="shapes" parent="TileMap" index="4" instance=ExtResource( 6 )]
-
-[node name="MovementTimer" type="Timer" parent="TileMap" index="5"]
+[node name="SpawnTimer" type="Timer" parent="TileMap" index="2"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = true
 
-[node name="SpawnTimer" type="Timer" parent="TileMap" index="6"]
+[node name="Enviroment" parent="TileMap" index="3" instance=ExtResource( 4 )]
 
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
+[node name="Player" parent="TileMap" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 320, 3296 )
 
 
